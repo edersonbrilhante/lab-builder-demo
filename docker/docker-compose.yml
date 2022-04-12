@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+
+  lab_builder:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    command: tail -f /dev/null
+    volumes:
+      - ../:/opt/automation/tools
+    container_name: lab_builder
+    networks:
+      - lab_net
+
+networks:
+  lab_net:
