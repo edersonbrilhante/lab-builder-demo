@@ -1,0 +1,3 @@
+- block:
+    - import_tasks: task1.yml
+  when: enabled_roles['linux_funcionality01'] is defined
