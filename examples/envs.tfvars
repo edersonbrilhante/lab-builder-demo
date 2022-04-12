@@ -1,8 +1,8 @@
 config = {
-  "linux" = {
+  "windows" = {
     "type" = "windows_standalone"
     "nodes" = {
-      "dc1" = {
+      "windows01" = {
         "type" = "windows"
         "enabled_roles" = {
           "windows_funcionality01" = true
@@ -16,13 +16,13 @@ config = {
       }
     }
   }
-  "windows" = {
+  "linux" = {
     "type" = "linux_standalone"
     "nodes" = {
-      "dc1" = {
+      "linux01" = {
         "type" = "linux"
         "enabled_roles" = {
-          "windows_funcionality01" = true
+          "linux_funcionality01" = true
         }
         "os" = {
           "size"    = "t2.medium"
