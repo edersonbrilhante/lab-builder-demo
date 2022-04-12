@@ -40,11 +40,11 @@ Run docker compose to setup a docker instance with all needed tools:
 
 #### Requirements
 
-- All steps to must be executed in the container `build_lab`. Use a bash session for that:
+- All steps must be executed in the container `lab_builder`. Use a bash session for that:
   - Start a bash session:
 
       ```bash
-      docker exec -it build_lab bash
+      docker exec -it lab_builder bash
       ```
 
 - AWS short-term credentials:
@@ -75,7 +75,7 @@ Run docker compose to setup a docker instance with all needed tools:
 
 The lab builder has a feature to stop and start ec2 instances to avoid wastage in the cloud.
 
-> :warning: **This will make the terraform state to be of sync with AWS**: Run `make lab-deploy` after start the lab instances, in order to update the lab configuration.
+> :warning: **This will make the terraform state to be of sync with AWS**: Run `make lab-deploy` after starting the lab instances, in order to update the lab configuration.
 
 Steps:
 
@@ -105,7 +105,7 @@ Steps:
 
 #### Accessing lab instances
 
-The lab builder allows to manage manually the instances through HTTP, SSH and RDP depending of the type. Use `make instances-credentials` to retrieve the credentials for each instance.
+Depending on the type, the lab builder allows managing the instances manually through SSH, and RDP. Use `make instances-credentials` to retrieve the credentials for each instance.
 
 - Retrieve credentials for all lab instances.
 
