@@ -1,4 +1,8 @@
-# Lab Builder
+# Lab Builder Demo
+
+This project is demo used to present the talk "Building labs using component-based architecture with terraform and ansible".
+
+This demo can be used as inspiration to create a similar project and enable developers to automatically spin up environments with all the required OS distributions with all needed configuration.
 
 - [Software Requirements](#software-requirements)
 - [Running your LAB](#running-your-lab)
