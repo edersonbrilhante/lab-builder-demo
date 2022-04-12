@@ -6,7 +6,6 @@ locals {
   input_config       = var.config.input_config
   deploy_config      = var.config.deploy_config
   environment_config = var.config.environment_config
-  splunks            = { for key, val in local.input_config.nodes : key => val if val.type == "splunk" }
   servers            = { for key, val in local.input_config.nodes : key => val if val.type == "linux" }
 }
 
