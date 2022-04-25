@@ -1,0 +1,3 @@
+- block:
+    - import_tasks: task1.yml
+  when: enabled_roles['windows_funcionality02'] is defined

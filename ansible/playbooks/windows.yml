@@ -2,3 +2,4 @@
   gather_facts: True
   roles:
     - windows_funcionality01
+    - windows_funcionality02

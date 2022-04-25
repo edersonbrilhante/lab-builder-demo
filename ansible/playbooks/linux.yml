@@ -3,3 +3,4 @@
   become: true
   roles:
     - linux_funcionality01
+    - linux_funcionality02

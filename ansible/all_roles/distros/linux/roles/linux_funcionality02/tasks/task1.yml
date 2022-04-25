@@ -1,0 +1,2 @@
+- name: Task 01
+  shell: echo "Task 02" > /tmp/task02.txt
