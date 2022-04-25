@@ -18,7 +18,6 @@ locals {
   )
 
   provisioning_command     = "ansible-playbook -i $PUBLIC_IP /opt/automation/tools/ansible/playbooks/linux.yml --extra-vars='${local.extra_vars}'"
-  event_generation_command = "ansible-playbook -i $PUBLIC_IP /opt/automation/tools/ansible/playbooks/linux_events.yml --extra-vars='${local.extra_vars}'"
 }
 
 data "aws_ami" "current" {
