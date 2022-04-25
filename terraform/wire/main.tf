@@ -7,7 +7,8 @@ data "aws_vpc" "default" {
 }
 
 locals {
-  wdc  = { for key, val in var.config : key => val if val.type == "windows_standalone" }
+  wdc  = { for key, val in var.config : key => val if val.type == "windows_domain_controller" }
+  wst  = { for key, val in var.config : key => val if val.type == "windows_standalone" }
   lnxs = { for key, val in var.config : key => val if val.type == "linux_standalone" }
 
   deploy_config = {
@@ -27,10 +28,26 @@ module "core" {
   vpc_id        = data.aws_vpc.default.id
 }
 
+
+module "env-windows-domain-controller" {
+  source = "../modules/environments/windows-domain-controller"
+
+  for_each = local.wdc
+
+  config = {
+    input_config = each.value
+    environment_config = {
+      name = each.key
+    }
+    deploy_config = local.deploy_config
+  }
+}
+
+
 module "env-windows-standalone" {
   source = "../modules/environments/windows-standalone"
 
-  for_each = local.wdc
+  for_each = local.wst
 
   config = {
     input_config = each.value
