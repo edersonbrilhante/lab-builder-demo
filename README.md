@@ -19,12 +19,12 @@ This demo can be used as inspiration to create a similar project and enable deve
 
 ### Write a config file to describe your desired environment
 
-You can use one of [configuration sample](examples) as inspiration for to create your own configuration file. The file must be named as `envs.tfvars` and placed in this project's root path.
+You can use one of [configuration sample](examples) as inspiration for to create your own configuration file. The file must be named as `input.tfvars` and placed in this project's root path.
 
   You can copy one of the samples in order to deploy a demo environment:  
   
   ```bash
-  cp examples/<name>.tfvars envs.tfvars
+  cp examples/<name>.tfvars input.tfvars
   ```
 
 ### Proper environment with all needed tools to manage your lab
