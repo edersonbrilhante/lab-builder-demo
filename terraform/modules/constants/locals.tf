@@ -112,5 +112,29 @@ locals {
       owner         = "013907871322" # https://aws.amazon.com/marketplace/pp/prodview-o5wqlcnuzvyv2
       instance_type = "t2.medium"
     }
+    "freebsd-12.2" = {
+      os_name       = "freebsd"
+      os_version    = "12.2"
+      ami_regex     = "FreeBSD 12.2-STABLE-arm64-*"
+      ssh_username  = "ec2-user"
+      owner         = "782442783595" # FREEBSD
+      instance_type = "t4g.nano"
+    }
+    "freebsd-12.3" = {
+      os_name       = "freebsd"
+      os_version    = "12.3"
+      ami_regex     = "FreeBSD 12.3-STABLE-arm64-*"
+      ssh_username  = "ec2-user"
+      owner         = "782442783595" # FREEBSD
+      instance_type = "t4g.nano"
+    }
+    "freebsd-13.0" = {
+      os_name       = "freebsd"
+      os_version    = "13.0"
+      ami_regex     = "FreeBSD 13.0-STABLE-arm64-*"
+      ssh_username  = "ec2-user"
+      owner         = "782442783595" # FREEBSD
+      instance_type = "t4g.nano"
+    }
   }
 }

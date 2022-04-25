@@ -1,0 +1,7 @@
+- hosts: all
+  gather_facts: True
+  become: true
+  become_user: root
+  become_method: su
+  roles:
+    - bsd_funcionality01
