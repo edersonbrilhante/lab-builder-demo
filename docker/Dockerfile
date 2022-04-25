@@ -22,6 +22,8 @@ RUN wget "https://github.com/stedolan/jq/releases/download/jq-${JQ_VERSION}/jq-l
 RUN chmod +x jq
 
 FROM python:3.10
+RUN apt-get update -y
+RUN apt-get install vim tree -y
 COPY --from=jq_builder /opt/automation/jq /usr/local/bin/
 COPY --from=terraform_builder /opt/automation/terraform /usr/local/bin/
 COPY --from=venv_builder /opt/automation/venv /opt/automation/venv

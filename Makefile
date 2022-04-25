@@ -6,7 +6,7 @@ COLOR_BOLD=\033[1m
 COLOR_BLUE=\033[38;5;20m
 COLOR_GREE=\033[38;5;35m
 PROJECT := Lab Builder
-AUTOMATION_TA_CONFIG_PATH := /opt/automation/tools/envs.tfvars
+AUTOMATION_TA_CONFIG_PATH := /opt/automation/tools/input.tfvars
 
 help:
 
@@ -47,7 +47,7 @@ help:
 terraform-init:
 	terraform -chdir=./terraform/wire init
 
-## G1: Deploy the lab (Apply changes in envs.tfvars).
+## G1: Deploy the lab (Apply changes in input.tfvars).
 lab-deploy: terraform-init
 	terraform -chdir=./terraform/wire apply -var-file=${AUTOMATION_TA_CONFIG_PATH} -auto-approve
 
